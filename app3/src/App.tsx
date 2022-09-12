@@ -1,14 +1,16 @@
 import * as React from 'react';
-import LocalButton from './Button';
-const TranslationSetter = React.lazy(() => import('Translation/ChangeLang'));
+const TT = React.lazy(() => import('Translation/Text'));
 
 const App = () => (
-  <div>
-    <h1>Typescript</h1>
-    <h2>App 2</h2>
-    <LocalButton />
+  <div style={{ background: 'red' }}>
+    <h2>App 3</h2>
+    <br />
+    <br />
+    <br />
+    <br />
+
     <React.Suspense fallback="Loading Button">
-      <TranslationSetter />
+      <TT as="h2" textKey="App3Sub" />
     </React.Suspense>
   </div>
 );

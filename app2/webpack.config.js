@@ -36,7 +36,7 @@ module.exports = {
       name: 'app2',
       filename: 'remoteEntry.js',
       exposes: {
-        './Button': './src/Button',
+        './App': './src/App',
       },
       shared: ['react', 'react-dom'],
       remotes: {

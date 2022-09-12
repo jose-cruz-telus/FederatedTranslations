@@ -29,6 +29,8 @@ i18n
           "Translations": "Welcome to Translations",
           "a2b": "App2 Button",
           "App1": "Mocked Host",
+          "noMFE": "Select the app to run!",
+          "App3Sub": "Translated subtittle!"
         },
       },
       es: {
@@ -37,6 +39,8 @@ i18n
           "Translations": "Bienvenidos a Traducciones",
           "a2b": "Boton de App2",
           "App1": "Anfitrion de Prueba",
+          "noMFE": "Selecciona la aplicacion.",
+          "App3Sub": "Subtitulos Traducidos."
         },
       },
     },

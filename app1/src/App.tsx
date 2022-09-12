@@ -1,21 +1,43 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-const RemoteButton = React.lazy(() => import('app2/Button'));
+const RemoteButton = React.lazy(() => import('app2/App'));
+const App3 = React.lazy(() => import('app3/App'));
 const TranslationSetter = React.lazy(() => import('Translation/ChangeLang'));
+const TT = React.lazy(() => import('Translation/Text'));
 
 const App = () => {
   const { t } = useTranslation();
+  const [loadedMfe, setLoadedMfe] = React.useState(null as (null | string));
+
+  const renderMfe = () => {
+    switch(loadedMfe) {
+      case 'APP2':
+        return <RemoteButton />
+      case 'APP3':
+        return <App3 />
+      default:
+        return <TT as="div" textKey="noMFE"/>
+    }
+  }
 
   return (
-  <div>
-    <h1>Typescript</h1>
-    <h2>{t('hw')}</h2>
-    <h2>{t("App1")}</h2>
-    <React.Suspense fallback="Loading Button">
-      <TranslationSetter />
-      <RemoteButton text="From APP1" />
-    </React.Suspense>
-  </div>
-)};
+    <div>
+      <React.Suspense fallback="Loading Button">
+		    <TT as="h2" textKey="App1" />
+		    <TT as="h4" textKey="hw" />
+        <TranslationSetter />
+        <br />
+      </React.Suspense>
+      <button onClick={() => setLoadedMfe('APP2')}>APP2</button>
+      <button onClick={() => setLoadedMfe('APP3')}>APP3</button>
+      <br />
+      <br />
+      <br />
+      <React.Suspense fallback="Loading Button">
+        {renderMfe()}
+      </React.Suspense>
+    </div>
+  );
+};
 
 export default App;

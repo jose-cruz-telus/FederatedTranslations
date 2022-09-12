@@ -10,7 +10,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 3002,
+    port: 3004,
   },
   output: {
     publicPath: 'auto',
@@ -33,10 +33,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'app2',
+      name: 'app3',
       filename: 'remoteEntry.js',
       exposes: {
-        './Button': './src/Button',
+        './App': './src/App',
       },
       shared: ['react', 'react-dom'],
       remotes: {

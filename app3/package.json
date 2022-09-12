@@ -1,5 +1,5 @@
 {
-  "name": "@typescript-project-references/app2",
+  "name": "@typescript-project-references/app3",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
@@ -20,7 +20,7 @@
   "scripts": {
     "start": "webpack-cli serve",
     "build": "webpack --mode production",
-    "serve": "serve dist -p 3002",
+    "serve": "serve dist -p 3004",
     "clean": "rm -rf dist"
   },
   "dependencies": {
