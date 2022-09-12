@@ -1,11 +1,14 @@
 # TypeScript Project References Example
 
 This example demos a basic host/remote application with TypeScript using [Project References](https://www.typescriptlang.org/docs/handbook/project-references.html).
+On top of this, a translations layer has been added, as a stand alone MFE wich exports the configuration for all MFEs and a Text component which maps the keys to the texts based on the selected Translation configuration.
+
 
 # Running Demo
 
-Run `yarn start`. This will build and serve both `app1` and `app2` on ports 3001 and 3002 respectively.
+Run `yarn start`. This will build and serve all `app1` and `app2`, app3 on ports 3001, 3002, 3004 respectively. And the Translations MFE 3003.
 
 - [localhost:3001](http://localhost:3001/)
 - [localhost:3002](http://localhost:3002/)
-  <img src="https://ssl.google-analytics.com/collect?v=1&t=event&ec=email&ea=open&t=event&tid=UA-120967034-1&z=1589682154&cid=ae045149-9d17-0367-bbb0-11c41d92b411&dt=ModuleFederationExamples&dp=/email/TypeScriptProjectReferences">
+- [localhost:3003](http://localhost:3003/)
+- [localhost:3004](http://localhost:3004/)
